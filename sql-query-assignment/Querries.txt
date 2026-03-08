@@ -1,0 +1,75 @@
+Question 1
+CREATE TABLE students (
+id INTEGER PRIMARY KEY,
+name TEXT,
+score INTEGER,
+passed BOOLEAN,
+class INTEGER
+);
+
+Question 2
+INSERT INTO students (id, name, score, passed, class) VALUES
+(1, 'Aarav', 92, TRUE, 10),
+(2, 'Diya', 76, TRUE, 10),
+(3, 'Rohan', 65, FALSE, 9),
+(4, 'Meera', 88, TRUE, 10),
+(5, 'Kabir', 54, FALSE, 9),
+(6, 'Ananya', 95, TRUE, 10),
+(7, 'Rahul', 81, TRUE, 9),
+(8, 'Sneha', 73, TRUE, 9),
+(9, 'Arjun', 84, TRUE, 10),
+(10, 'Kavya', 69, FALSE, 9);
+
+Question 3
+SELECT *
+FROM students;
+
+Question 4
+SELECT name, score
+FROM students;
+
+Question 5
+SELECT *
+FROM students
+WHERE score > 80;
+
+Question 6
+SELECT *
+FROM students
+WHERE score > 80 AND passed = TRUE;
+
+Question 7
+SELECT *
+FROM students
+WHERE score > 85 OR class = 9;
+
+Question 8
+SELECT *
+FROM students
+WHERE NOT passed;
+
+Question 9
+SELECT DISTINCT class
+FROM students;
+
+Question 10
+SELECT *
+FROM students
+ORDER BY score DESC
+LIMIT 5;
+
+Question 11
+SELECT *
+FROM students
+ORDER BY class ASC, score DESC;
+
+Question 12
+SELECT name, score AS final_score
+FROM students;
+
+Question 13
+SELECT name, score
+FROM students
+WHERE score > 75
+ORDER BY score DESC
+LIMIT 3;
